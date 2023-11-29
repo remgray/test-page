@@ -1,0 +1,12 @@
+@mixin hover
+	@media (hover: hover)
+		&:hover, &:focus-visible
+			@content
+
+@mixin screen_md
+	@media (max-width: 1250px)
+		@content
+
+@mixin screen_sm
+	@media (max-width: 1024px)
+		@content

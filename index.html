@@ -3,15 +3,17 @@
 
 <head>
 	<meta charset="UTF-8" />
-	<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Vite App</title>
+	<title>SOC Prime</title>
 </head>
 
 <body>
-	<div class="block">
-		<div class="block-el">123</div>
-	</div>
+	{{> header }}
+	<main>
+		{{> plans}}
+	</main>
+	{{> modal}}
 	<script type="module" src="./src/js/main.js"></script>
 </body>
 
