@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// logger
 	function eventsLogger(eventText) {
-		// const url = 'https://httpbin.org/post' // test post query
+		const url = 'https://httpbin.org/post' // test post query
 		const data = { event: eventText }
 
 		fetch(url, {
