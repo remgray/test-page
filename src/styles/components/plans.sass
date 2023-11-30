@@ -17,8 +17,6 @@
 	min-height: 100vh
 	padding: clamp(60px, 8vh, 100px) 0 10px
 	overflow: hidden
-	+screen_sm
-		height: auto
 	.container
 		position: relative
 	&__list
@@ -36,6 +34,7 @@
 			flex-direction: column
 	&__item
 		--clip-path: polygon(40px 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%, 0% 60%, 0 40px)
+
 		position: relative
 		display: flex
 		height: 100%
@@ -48,9 +47,9 @@
 			max-width: 360px
 			margin: 0 auto
 		&-inner
+			border: 1px solid transparent
 			background-color: rgba($color-primary, .5)
 			clip-path: var(--clip-path)
-			border: 1px solid transparent
 			transition: background-color .2s
 		&-content
 			display: flex
@@ -149,10 +148,10 @@
 			position: relative
 			z-index: 2
 	&__bottom
-		margin-top: 20px
 		display: flex
 		justify-content: center
 		align-items: center
+		margin-top: 20px
 		a
 			padding: 5px 16px
 			& + a
