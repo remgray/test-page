@@ -22,9 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
 	const modalCloseBtn = document.querySelectorAll('[data-modal-close]')
 	const modalBtnStart = modal.querySelector('[data-modal-start]')
 
+	let lastFocusedTrigger = null;
+
 	openModalTrigger.forEach(trigger => {
 		trigger.addEventListener('click', (e) => {
 			openModal()
+			lastFocusedTrigger = trigger
 		})
 	})
 
@@ -44,9 +47,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	function openModal() {
 		modal.classList.add('opened')
+		modal.focus()
 	}
 	function closeModal() {
 		modal.classList.remove('opened')
+		lastFocusedTrigger.focus()
 	}
 
 	// logger
